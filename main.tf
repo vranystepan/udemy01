@@ -100,7 +100,7 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "ec2" {
   ami = data.aws_ami.ubuntu.id
 
-  instance_type = "t3.micro"
+  instance_type = "t3.small"
 
   associate_public_ip_address = true
   key_name                    = aws_key_pair.stepan.key_name
